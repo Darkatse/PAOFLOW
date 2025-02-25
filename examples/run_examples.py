@@ -19,11 +19,11 @@ from check_test import verifyData
 def get_exeCmd ( engine, calcType, inputFile ):
 
 #################### User defined parameters ####################
-    prefix_QE = '/Users/marco/Local/Programs/openmpi/bin/mpirun -np 16'
-    prefix_Python = '/Users/marco/Local/Programs/anaconda3/bin/mpirun -np 8'
+    prefix_QE = '/opt/intel/oneapi/mpi/2021.14/bin/mpirun -np 4'
+    prefix_Python = '/home/darkatse/.miniforge3/envs/paoflow/bin/mpirun -np 4'
 
-    path_QE = '/Users/marco/Local/Programs/qe-6.2.1/bin/'
-    path_Python = '/Users/marco/Local/Programs/anaconda3/bin/'
+    path_QE = '/home/darkatse/DFT/qe-7.4-intel/bin/'
+    path_Python = '/home/darkatse/.miniforge3/envs/paoflow/bin/'
 
     if engine=='qe':
         execDict={'scf':'pw.x -npool 2','nscf':'pw.x -npool 2','proj':'projwfc.x -npool 2'}
